@@ -12,6 +12,7 @@
 		638D211A2346BD3700CD10FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638D21182346BD3700CD10FE /* Main.storyboard */; };
 		638D211C2346BD3800CD10FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638D211B2346BD3800CD10FE /* Assets.xcassets */; };
 		638D211F2346BD3800CD10FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638D211D2346BD3800CD10FE /* LaunchScreen.storyboard */; };
+		638D212D2346C03E00CD10FE /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D212C2346C03E00CD10FE /* Starship.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		638D211B2346BD3800CD10FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		638D211E2346BD3800CD10FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		638D21202346BD3800CD10FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		638D212C2346C03E00CD10FE /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		638D21262346BD4600CD10FE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				638D212C2346C03E00CD10FE /* Starship.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				638D212D2346C03E00CD10FE /* Starship.swift in Sources */,
 				638D21132346BD3700CD10FE /* AppDelegate.swift in Sources */,
 				638D21152346BD3700CD10FE /* SceneDelegate.swift in Sources */,
 			);
