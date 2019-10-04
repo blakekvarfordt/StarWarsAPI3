@@ -10,9 +10,11 @@ import Foundation
 
 class StarshipController {
     
+    static let shared = StarshipController()
+    
     let baseURL = URL(string: StarshipConstants.baseURL)
     
-    func getDaStarships(with searchTerm: String, completion: @escaping ([Starship?]) -> Void ) {
+    func getDaStarships(with searchTerm: String, completion: @escaping ([Starship]) -> Void ) {
         
         guard let url = baseURL else { completion([]); return }
         
@@ -34,7 +36,7 @@ class StarshipController {
             
             do {
                 let decodedwhatever = try JSONDecoder().decode(TopLevelDict.self, from: data)
-                completion(decodedwhatever.starships)
+                completion(decodedwhatever.results)
             } catch {
                 completion([])
             }
