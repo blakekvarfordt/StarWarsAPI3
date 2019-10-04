@@ -46,6 +46,13 @@ class StarshipListTVC: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toStarshipDetailTVC" {
+            guard let index = tableView.indexPathForSelectedRow, let destination = segue.destination as? StarshipDetailTVC else { return }
+            let starship = starships[index.row]
+            
+            destination.starship = starship
+            
+        }
  
     }
 }
