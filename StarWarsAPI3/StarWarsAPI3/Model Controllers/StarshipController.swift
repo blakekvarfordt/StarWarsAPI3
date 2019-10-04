@@ -12,7 +12,7 @@ class StarshipController {
     
     let baseURL = URL(string: StarshipConstants.baseURL)
     
-    func getDaStarships(with searchTerm: String, completion: @escaping ([Starship]) -> Void ) {
+    func getDaStarships(with searchTerm: String, completion: @escaping ([Starship?]) -> Void ) {
         
         guard let url = baseURL else { completion([]); return }
         
@@ -39,5 +39,27 @@ class StarshipController {
                 completion([])
             }
         }; dataTask.resume()
+    }
+    
+    func getFilm(filmURL: String, completion: @escaping (Film?) -> Void) {
+        
+        guard let url = URL(string: filmURL) else { completion(nil); return }
+        
+        let filmRequest = URLSession.shared.dataTask(with: url) { (data, _, error) in
+            
+            if let error = error {
+                print("Error", error.localizedDescription)
+            }
+            
+            guard let data = data else { completion(nil); return }
+            
+            do {
+                let film = try JSONDecoder().decode(Film.self, from: data)
+                completion(film)
+            } catch {
+                completion(nil)
+            }
+            
+        }; filmRequest.resume()
     }
 }
